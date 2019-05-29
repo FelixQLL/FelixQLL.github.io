@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives | Hexo</title>
+  <title>Wechat-navigator | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="关于微信开发小程序如何实现页面导航navigator的使用navigator是页面链接组件，相当于Html标签集中的a标签。当需要从一个页面跳转到另一个页面时，使用该组件。navigator组件根据open-type属性不同，分别对应于5个小程序导航API： 1、当open-type为navigate，相当于wx.navigateTo 2、当open-type为redirect，相当于wx.red">
+<meta name="keywords" content="Wechat-navigator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wechat-navigator">
+<meta property="og:url" content="http://yoursite.com/2018/04/30/Wechat-navigator/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关于微信开发小程序如何实现页面导航navigator的使用navigator是页面链接组件，相当于Html标签集中的a标签。当需要从一个页面跳转到另一个页面时，使用该组件。navigator组件根据open-type属性不同，分别对应于5个小程序导航API： 1、当open-type为navigate，相当于wx.navigateTo 2、当open-type为redirect，相当于wx.red">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-30T14:36:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Wechat-navigator">
+<meta name="twitter:description" content="关于微信开发小程序如何实现页面导航navigator的使用navigator是页面链接组件，相当于Html标签集中的a标签。当需要从一个页面跳转到另一个页面时，使用该组件。navigator组件根据open-type属性不同，分别对应于5个小程序导航API： 1、当open-type为navigate，相当于wx.navigateTo 2、当open-type为redirect，相当于wx.red">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,226 +65,73 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/03/06/Matalb2017bMAC/" class="archive-article-date">
-  <time datetime="2019-03-06T12:50:21.000Z" itemprop="datePublished">Mar 6</time>
+        <section id="main"><article id="post-Wechat-navigator" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/30/Wechat-navigator/" class="article-date">
+  <time datetime="2018-04-30T14:30:57.000Z" itemprop="datePublished">2018-04-30</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Wechat/">Wechat</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/Matalb2017bMAC/">Matalb2017b  MAC</a>
+    <h1 class="article-title" itemprop="name">
+      Wechat-navigator
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="关于微信开发小程序如何实现页面导航"><a href="#关于微信开发小程序如何实现页面导航" class="headerlink" title="关于微信开发小程序如何实现页面导航"></a>关于微信开发小程序如何实现页面导航</h4><h5 id="navigator的使用"><a href="#navigator的使用" class="headerlink" title="navigator的使用"></a>navigator的使用</h5><p>navigator是页面链接组件，相当于Html标签集中的a标签。当需要从一个页面跳转到另一个页面时，使用该组件。navigator组件根据open-type属性不同，分别对应于5个小程序导航API：</p>
+<p>1、当open-type为navigate，相当于wx.navigateTo</p>
+<p>2、当open-type为redirect，相当于wx.redirect</p>
+<p>3、当open-type为switchTab，相当于wx.switchTab</p>
+<p>4、当open-type为reLaunch，相当于wx.reLaunch</p>
+<p>5、当open-type为navigateBack，相当于wx.navigateBack</p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class="weui-btn-area"&gt;</span><br><span class="line">  &lt;navigator url=<span class="string">"navigator?title=navigate"</span> open-type=<span class="string">"navigate"</span> </span><br><span class="line">hover-class="navigator-hover"&gt;</span><br><span class="line">    &lt;button type="default"&gt;navigate:新窗口打开&lt;/button&gt;</span><br><span class="line">  &lt;/navigator&gt;</span><br><span class="line">  &lt;navigator url=<span class="string">"navigator?title=redirect"</span> open-type=<span class="string">"redirect"</span> </span><br><span class="line">hover-class="navigator-hover"&gt;</span><br><span class="line">    &lt;button type="default"&gt;redirect:在当前页打开&lt;/button&gt;</span><br><span class="line">  &lt;/navigator&gt;</span><br><span class="line">  &lt;navigator url=<span class="string">"navigator"</span> open-type=<span class="string">"switchTab"</span> </span><br><span class="line">hover-class="navigator-hover"&gt;</span><br><span class="line">    &lt;button type="default"&gt;switchTab:切换tab&lt;/button&gt;</span><br><span class="line">  &lt;/navigator&gt;</span><br><span class="line">  &lt;navigator url=<span class="string">"navigator?title=reLaunch"</span> open-type=<span class="string">"reLaunch"</span> </span><br><span class="line">hover-class="navigator-hover"&gt;</span><br><span class="line">    &lt;button type="default"&gt;reLaunch:重启打开&lt;/button&gt;</span><br><span class="line">  &lt;/navigator&gt;</span><br><span class="line">  &lt;navigator delta=<span class="string">"1"</span> open-type=<span class="string">"navigateBack"</span>&gt;</span><br><span class="line">    &lt;button type="default"&gt;navigateBack:返回页面&lt;/button&gt;</span><br><span class="line">  &lt;/navigator&gt;</span><br><span class="line">&lt;/view&gt;</span><br><span class="line">...</span><br><span class="line">.navigator-hover button&#123;</span><br><span class="line">  background-color: <span class="comment">#DEDEDE;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/30/Wechat-navigator/" data-id="cjw95mlnl001zobsemvtzioik" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wechat-navigator/">Wechat-navigator</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/08/Matlab2017/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Matlab2017a破解与安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/14/pat-1023/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PAT乙级-1023    组个最小数 (20)</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/10/PAT-1001-0/" class="archive-article-date">
-  <time datetime="2018-06-10T14:45:30.000Z" itemprop="datePublished">Jun 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/10/PAT-1001-0/">PAT甲级-1001</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/10/pat-1027/" class="archive-article-date">
-  <time datetime="2018-06-10T14:41:15.000Z" itemprop="datePublished">Jun 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/10/pat-1027/">PAT乙级-1027  打印沙漏(20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/08/Matlab2017/" class="archive-article-date">
-  <time datetime="2018-06-08T07:39:07.000Z" itemprop="datePublished">Jun 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/08/Matlab2017/">Matlab2017a破解与安装</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/04/30/Wechat-navigator/" class="archive-article-date">
-  <time datetime="2018-04-30T14:30:57.000Z" itemprop="datePublished">Apr 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/30/Wechat-navigator/">Wechat-navigator</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/14/pat-1023/" class="archive-article-date">
-  <time datetime="2018-03-14T07:56:29.000Z" itemprop="datePublished">Mar 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/14/pat-1023/">PAT乙级-1023    组个最小数 (20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/12/pat-1022/" class="archive-article-date">
-  <time datetime="2018-03-12T14:52:59.000Z" itemprop="datePublished">Mar 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/pat-1022/">PAT乙级-1022     D进制的A+B (20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/12/pat-1021/" class="archive-article-date">
-  <time datetime="2018-03-12T14:25:50.000Z" itemprop="datePublished">Mar 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/pat-1021/">PAT乙级-1021      个位数统计 (15)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/29/pat-1020/" class="archive-article-date">
-  <time datetime="2018-01-29T14:09:39.000Z" itemprop="datePublished">Jan 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/pat-1020/">PAT乙级-1020    月饼 (25)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/29/pat-1019/" class="archive-article-date">
-  <time datetime="2018-01-29T10:09:57.000Z" itemprop="datePublished">Jan 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/pat-1019/">PAT乙级-1019      数字黑洞 (20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

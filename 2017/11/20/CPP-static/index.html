@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>C++ static | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="结论1：不能通过类名来调用类的非静态成员函数。结论2：类的对象可以使用静态成员函数和非静态成员函数。结论3：静态成员函数中不能引用非静态成员。结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。结论5：类的静态成员变量必须先初始化再使用。静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ static">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/CPP-static/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="结论1：不能通过类名来调用类的非静态成员函数。结论2：类的对象可以使用静态成员函数和非静态成员函数。结论3：静态成员函数中不能引用非静态成员。结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。结论5：类的静态成员变量必须先初始化再使用。静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-11-28T05:26:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++ static">
+<meta name="twitter:description" content="结论1：不能通过类名来调用类的非静态成员函数。结论2：类的对象可以使用静态成员函数和非静态成员函数。结论3：静态成员函数中不能引用非静态成员。结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。结论5：类的静态成员变量必须先初始化再使用。静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CPP-static" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/20/CPP-static/" class="article-date">
+  <time datetime="2017-11-20T15:38:30.000Z" itemprop="datePublished">2017-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++ static
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="结论1：不能通过类名来调用类的非静态成员函数。"><a href="#结论1：不能通过类名来调用类的非静态成员函数。" class="headerlink" title="结论1：不能通过类名来调用类的非静态成员函数。"></a>结论1：不能通过类名来调用类的非静态成员函数。</h3><h3 id="结论2：类的对象可以使用静态成员函数和非静态成员函数。"><a href="#结论2：类的对象可以使用静态成员函数和非静态成员函数。" class="headerlink" title="结论2：类的对象可以使用静态成员函数和非静态成员函数。"></a>结论2：类的对象可以使用静态成员函数和非静态成员函数。</h3><h3 id="结论3：静态成员函数中不能引用非静态成员。"><a href="#结论3：静态成员函数中不能引用非静态成员。" class="headerlink" title="结论3：静态成员函数中不能引用非静态成员。"></a>结论3：静态成员函数中不能引用非静态成员。</h3><h3 id="结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。"><a href="#结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。" class="headerlink" title="结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。"></a>结论4：类的非静态成员函数可以调用用静态成员函数，但反之不能。</h3><h3 id="结论5：类的静态成员变量必须先初始化再使用。"><a href="#结论5：类的静态成员变量必须先初始化再使用。" class="headerlink" title="结论5：类的静态成员变量必须先初始化再使用。"></a>结论5：类的静态成员变量必须先初始化再使用。</h3><h3 id="静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。"><a href="#静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。" class="headerlink" title="静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。"></a>静态函数与普通函数不同，它只能在声明它的文件当中可见，不能被其他文件使用。</h3><h3 id="普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为普通成员函数总是具体的属于某个类的具体对象的。通常情况下，this指针是缺省的、但是与普通函数相比，静态成员函数由于不是与任何的对象相联系，因此它不具有this指针，从这个意义上讲，它无法访问属于类对象的非静态数据成员，也无法访问非静态成员函数，它只能调用其余的静态成员函数。"><a href="#普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为普通成员函数总是具体的属于某个类的具体对象的。通常情况下，this指针是缺省的、但是与普通函数相比，静态成员函数由于不是与任何的对象相联系，因此它不具有this指针，从这个意义上讲，它无法访问属于类对象的非静态数据成员，也无法访问非静态成员函数，它只能调用其余的静态成员函数。" class="headerlink" title="普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为普通成员函数总是具体的属于某个类的具体对象的。通常情况下，this指针是缺省的、但是与普通函数相比，静态成员函数由于不是与任何的对象相联系，因此它不具有this指针，从这个意义上讲，它无法访问属于类对象的非静态数据成员，也无法访问非静态成员函数，它只能调用其余的静态成员函数。"></a>普通的成员函数一般都隐藏了一个this指针，this指针指向类的对象本身，因为普通成员函数总是具体的属于某个类的具体对象的。通常情况下，this指针是缺省的、但是与普通函数相比，静态成员函数由于不是与任何的对象相联系，因此它不具有this指针，从这个意义上讲，它无法访问属于类对象的非静态数据成员，也无法访问非静态成员函数，它只能调用其余的静态成员函数。</h3><p>#<br>#</p>
+<h2 id="（1）出现在类体外的函数不能指定关键字static；"><a href="#（1）出现在类体外的函数不能指定关键字static；" class="headerlink" title="（1）出现在类体外的函数不能指定关键字static；"></a>（1）出现在类体外的函数不能指定关键字static；</h2><h2 id="（2）静态成员之间可以互相访问，包括静态成员函数访问静态数据成员和访问静态成员函数；"><a href="#（2）静态成员之间可以互相访问，包括静态成员函数访问静态数据成员和访问静态成员函数；" class="headerlink" title="（2）静态成员之间可以互相访问，包括静态成员函数访问静态数据成员和访问静态成员函数；"></a>（2）静态成员之间可以互相访问，包括静态成员函数访问静态数据成员和访问静态成员函数；</h2><h2 id="（3）非静态成员函数可以任意地访问静态成员函数和静态数据成员；"><a href="#（3）非静态成员函数可以任意地访问静态成员函数和静态数据成员；" class="headerlink" title="（3）非静态成员函数可以任意地访问静态成员函数和静态数据成员；"></a>（3）非静态成员函数可以任意地访问静态成员函数和静态数据成员；</h2><h2 id="（4）静态成员函数不能访问非静态成员函数和非静态数据成员；"><a href="#（4）静态成员函数不能访问非静态成员函数和非静态数据成员；" class="headerlink" title="（4）静态成员函数不能访问非静态成员函数和非静态数据成员；"></a>（4）静态成员函数不能访问非静态成员函数和非静态数据成员；</h2><h2 id="（5）由于没有this指针的额外开销，因此静态成员函数与类的全局函数相比，速度上会有少许的增长；"><a href="#（5）由于没有this指针的额外开销，因此静态成员函数与类的全局函数相比，速度上会有少许的增长；" class="headerlink" title="（5）由于没有this指针的额外开销，因此静态成员函数与类的全局函数相比，速度上会有少许的增长；"></a>（5）由于没有this指针的额外开销，因此静态成员函数与类的全局函数相比，速度上会有少许的增长；</h2><h2 id="（6）调用静态成员函数，可以用成员访问操作符-和-gt-为一个类的对象或指向类对象的指调用静态成员函数。"><a href="#（6）调用静态成员函数，可以用成员访问操作符-和-gt-为一个类的对象或指向类对象的指调用静态成员函数。" class="headerlink" title="（6）调用静态成员函数，可以用成员访问操作符(.)和(-&gt;)为一个类的对象或指向类对象的指调用静态成员函数。"></a>（6）调用静态成员函数，可以用成员访问操作符(.)和(-&gt;)为一个类的对象或指向类对象的指调用静态成员函数。</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/20/CPP-static/" data-id="cjw95mlms0005obseod1sdnrp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/20/GetTimeInJS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          如何在JS里获取系统时间，并在html中应用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/20/CPP-Array/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C++ 数组动态分配</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Matlab/">Matlab</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT乙级/">PAT乙级</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT甲级/">PAT甲级</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wechat/">Wechat</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/单链表/">单链表</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/排序/">排序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数模/">数模</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PAT乙级/">PAT乙级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PAT甲级/">PAT甲级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wechat-navigator/">Wechat-navigator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/指针/">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/Matlab/" style="font-size: 12.5px;">Matlab</a> <a href="/tags/Node-JS/" style="font-size: 10px;">Node.JS</a> <a href="/tags/PAT乙级/" style="font-size: 20px;">PAT乙级</a> <a href="/tags/PAT甲级/" style="font-size: 10px;">PAT甲级</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Wechat-navigator/" style="font-size: 10px;">Wechat-navigator</a> <a href="/tags/指针/" style="font-size: 10px;">指针</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a> <a href="/tags/算法与数据结构/" style="font-size: 17.5px;">算法与数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/06/Matalb2017bMAC/">Matalb2017b  MAC</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/PAT-1001-0/">PAT甲级-1001</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/pat-1027/">PAT乙级-1027  打印沙漏(20)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/08/Matlab2017/">Matlab2017a破解与安装</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/30/Wechat-navigator/">Wechat-navigator</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

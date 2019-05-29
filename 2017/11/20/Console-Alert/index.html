@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives | Hexo</title>
+  <title>console.log( )  &amp;  alert( ) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="alert() 是阻塞 alert() 在非调试环境中不能轻易抑制 console 通常会很好地格式化对象，并允许遍历它们 日志记录通常具有指向发出日志记录的代码的交互式指针 您一次看不到多个alert()讯息 consoles可以使用直观的格式化具有不同的日志记录级别   尝试这个： var data = {a: ‘foo’, b: ‘bar’}; console.log(data); ale">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="console.log( )  &amp;  alert( )">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/Console-Alert/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="alert() 是阻塞 alert() 在非调试环境中不能轻易抑制 console 通常会很好地格式化对象，并允许遍历它们 日志记录通常具有指向发出日志记录的代码的交互式指针 您一次看不到多个alert()讯息 consoles可以使用直观的格式化具有不同的日志记录级别   尝试这个： var data = {a: ‘foo’, b: ‘bar’}; console.log(data); ale">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-11-28T05:26:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="console.log( )  &amp;  alert( )">
+<meta name="twitter:description" content="alert() 是阻塞 alert() 在非调试环境中不能轻易抑制 console 通常会很好地格式化对象，并允许遍历它们 日志记录通常具有指向发出日志记录的代码的交互式指针 您一次看不到多个alert()讯息 consoles可以使用直观的格式化具有不同的日志记录级别   尝试这个： var data = {a: ‘foo’, b: ‘bar’}; console.log(data); ale">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,226 +65,88 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/03/06/Matalb2017bMAC/" class="archive-article-date">
-  <time datetime="2019-03-06T12:50:21.000Z" itemprop="datePublished">Mar 6</time>
+        <section id="main"><article id="post-Console-Alert" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/20/Console-Alert/" class="article-date">
+  <time datetime="2017-11-20T15:50:04.000Z" itemprop="datePublished">2017-11-20</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/Matalb2017bMAC/">Matalb2017b  MAC</a>
+    <h1 class="article-title" itemprop="name">
+      console.log( )  &amp;  alert( )
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>alert() 是阻塞</li>
+<li>alert() 在非调试环境中不能轻易抑制</li>
+<li>console 通常会很好地格式化对象，并允许遍历它们</li>
+<li>日志记录通常具有指向发出日志记录的代码的交互式指针</li>
+<li>您一次看不到多个alert()讯息</li>
+<li>consoles可以使用直观的格式化具有不同的日志记录级别</li>
+</ul>
+<hr>
+<p>尝试这个：</p>
+<p>var data = {a: ‘foo’, b: ‘bar’};</p>
+<p>console.log(data);</p>
+<p>alert(data);</p>
+<p>你会看到，console.log显示对象，同时alert给你[object Object]，这是没有用的。这也是真实的,例如元素：<br>alert(document.body); // [object HTMLBodyElement] (exact result depends on your browser)</p>
+<hr>
+<p>两者都只是一种获取JS中当时发生的情况的信息。我以前一直使用alert（），但由于几个原因迁移到console.log（）。（旁注：控制台提供的不仅仅是log（），还可以看看它还能做什么）。<br>我认为console.log（）的主要好处是：</p>
+<ul>
+<li>它不会停止像alert这样的进程</li>
+<li>您可以看到什么脚本抛出日志条目的行，而不将该行放入您的消息</li>
+<li>如果你有不止一个你正在调试的东西，那么可以让你的警报框保持“OK”，真的很烦人</li>
+<li>你可以记录对象并获得很多好的信息（感谢提醒，其他回答者）<br>最后，它归结为你喜欢调试。<br>有一件事要注意。不是所有的浏览器都支持console.log（），如果你在你的代码中离开你的console.log（）调用，将会有一个问题。如果控制台不可用来解决这个问题，请提供控制台存根。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/20/Console-Alert/" data-id="cjw95mlmt0006obsea4mi1vj2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/pat-1001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PAT乙级-1001  害死人不偿命的(3n+1)猜想 (15)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/20/Variable-lift/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">变量提升</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/10/PAT-1001-0/" class="archive-article-date">
-  <time datetime="2018-06-10T14:45:30.000Z" itemprop="datePublished">Jun 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/10/PAT-1001-0/">PAT甲级-1001</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/10/pat-1027/" class="archive-article-date">
-  <time datetime="2018-06-10T14:41:15.000Z" itemprop="datePublished">Jun 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/10/pat-1027/">PAT乙级-1027  打印沙漏(20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/08/Matlab2017/" class="archive-article-date">
-  <time datetime="2018-06-08T07:39:07.000Z" itemprop="datePublished">Jun 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/08/Matlab2017/">Matlab2017a破解与安装</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/04/30/Wechat-navigator/" class="archive-article-date">
-  <time datetime="2018-04-30T14:30:57.000Z" itemprop="datePublished">Apr 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/30/Wechat-navigator/">Wechat-navigator</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/14/pat-1023/" class="archive-article-date">
-  <time datetime="2018-03-14T07:56:29.000Z" itemprop="datePublished">Mar 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/14/pat-1023/">PAT乙级-1023    组个最小数 (20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/12/pat-1022/" class="archive-article-date">
-  <time datetime="2018-03-12T14:52:59.000Z" itemprop="datePublished">Mar 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/pat-1022/">PAT乙级-1022     D进制的A+B (20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/12/pat-1021/" class="archive-article-date">
-  <time datetime="2018-03-12T14:25:50.000Z" itemprop="datePublished">Mar 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/pat-1021/">PAT乙级-1021      个位数统计 (15)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/29/pat-1020/" class="archive-article-date">
-  <time datetime="2018-01-29T14:09:39.000Z" itemprop="datePublished">Jan 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/pat-1020/">PAT乙级-1020    月饼 (25)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/29/pat-1019/" class="archive-article-date">
-  <time datetime="2018-01-29T10:09:57.000Z" itemprop="datePublished">Jan 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/pat-1019/">PAT乙级-1019      数字黑洞 (20)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

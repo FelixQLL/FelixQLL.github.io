@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>二级指针 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="二级指针一、概念在如下的A指向B、B指向C的指向关系中：首先C是”一段内容”,比如你用malloc或者new分配了一块内存，然后塞进去”一段内容”,那就是C了。C的起始地址是0x00000008。B是一个指针变量,其中存放着C的地址，但是B也要占空间的啊，所以B也有地址，B的起始地址是0x00000004,但是B内存中存放的是C的地址，所以B里面的内容就是0x00000008。 那么到此为止都比较">
+<meta name="keywords" content="指针">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二级指针">
+<meta property="og:url" content="http://yoursite.com/2017/11/30/Second-Rank-Pointer/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="二级指针一、概念在如下的A指向B、B指向C的指向关系中：首先C是”一段内容”,比如你用malloc或者new分配了一块内存，然后塞进去”一段内容”,那就是C了。C的起始地址是0x00000008。B是一个指针变量,其中存放着C的地址，但是B也要占空间的啊，所以B也有地址，B的起始地址是0x00000004,但是B内存中存放的是C的地址，所以B里面的内容就是0x00000008。 那么到此为止都比较">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://img.blog.csdn.net/20150624234831842">
+<meta property="og:updated_time" content="2017-11-30T15:22:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二级指针">
+<meta name="twitter:description" content="二级指针一、概念在如下的A指向B、B指向C的指向关系中：首先C是”一段内容”,比如你用malloc或者new分配了一块内存，然后塞进去”一段内容”,那就是C了。C的起始地址是0x00000008。B是一个指针变量,其中存放着C的地址，但是B也要占空间的啊，所以B也有地址，B的起始地址是0x00000004,但是B内存中存放的是C的地址，所以B里面的内容就是0x00000008。 那么到此为止都比较">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20150624234831842">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Second-Rank-Pointer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/30/Second-Rank-Pointer/" class="article-date">
+  <time datetime="2017-11-30T15:14:55.000Z" itemprop="datePublished">2017-11-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C语言/">C语言</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      二级指针
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="二级指针"><a href="#二级指针" class="headerlink" title="二级指针"></a>二级指针</h2><h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><p>在如下的A指向B、B指向C的指向关系中：<br>首先<br>C是”一段内容”,比如你用malloc或者new分配了一块内存，然后塞进去”一段内容”,那就是C了。C的起始地址是0x00000008。<br>B是一个指针变量,其中存放着C的地址，但是B也要占空间的啊，所以B也有地址，B的起始地址是0x00000004,但是B内存中存放的是C的地址，所以B里面的内容就是0x00000008。</p>
+<p>那么到此为止都比较好理解:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">B= <span class="number">0x00000008</span>;  //B的内容   </span><br><span class="line">*B = <span class="string">"一段内容"</span>;  //B解引用，也就是B指针指向的C的值  </span><br><span class="line">&amp;B = <span class="number">0x00000004</span>;  //B取地址，B的地址是<span class="number">0x00000004</span></span><br></pre></td></tr></table></figure></p>
+<p>那么，再来看A：<br>A是二级指针变量，其中存放着B的地址0x00000004,A也有地址，是0x00000000;<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*A = B= <span class="number">0x00000008</span>;  //A解引用也就是B的内容   </span><br><span class="line">**A = *B = <span class="string">"一段内容"</span>;  //B解引用，也就是B指针指向的C的值  </span><br><span class="line">A = &amp;B = <span class="number">0x00000004</span>;  //A存的是B的地址，B的地址是<span class="number">0x00000004</span>  </span><br><span class="line">&amp;A = <span class="number">0x00000000</span>;  //A取地址</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20150624234831842" alt="二级指针"></p>
+<h3 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h3><p>二级指针作为函数参数的作用:在函数外部定义一个指针p，在函数内给指针赋值，函数结束后对指针p生效，那么我们就需要二级指针。</p>
+<p>看看下面一段代码：有两个变量a,b,指针q,q指向a，我们想让q指向b,在函数里面实现。</p>
+<h4 id="1-先看看一级指针的实现"><a href="#1-先看看一级指针的实现" class="headerlink" title="1.先看看一级指针的实现"></a>1.先看看一级指针的实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;  </span></span><br><span class="line">  </span><br><span class="line">using namespace std;  </span><br><span class="line">  </span><br><span class="line">int a= <span class="number">10</span>;  </span><br><span class="line">int b = <span class="number">100</span>;  </span><br><span class="line">int *q;  </span><br><span class="line">  </span><br><span class="line">void func(int *p)  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  //note:<span class="number">3</span>  </span><br><span class="line">    p = &amp;b;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  //note:<span class="number">4</span>  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">int main()  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"&amp;a="</span>&lt;&lt;&amp;a&lt;&lt;<span class="string">",&amp;b="</span>&lt;&lt;&amp;b&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  //note:<span class="number">1</span>  </span><br><span class="line">    q = &amp;a;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  //note:<span class="number">2</span>  </span><br><span class="line">    func(q);  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  //note:<span class="number">5</span>  </span><br><span class="line">  </span><br><span class="line">    system(<span class="string">"pause"</span>);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 这么写有什么问题？为什么*q不等于100？我们看一下输出便知：</p>
+<p>&amp;a=0032F000,&amp;b=0032F004,&amp;q=0032F228<br><em>q=10,q=0032F000,&amp;q=0032F228<br>func:&amp;p=0018FD24,p=0032F000<br>func:&amp;p=0018FD24,p=0032F004
+</em>q=10,q=0032F000,&amp;q=0032F228</p>
+<p>我们看输出:</p>
+<p>note:1-&gt;a,b,q都有一个地址.</p>
+<p>note:2-&gt;q指向a.</p>
+<p>note:3-&gt;我们发现参数p的地址变了,跟q不一样了，是的参数传递是制作了一个副本,也就是p和q不是同一个指针,但是指向的地址0x0032F000(a的地址)还是不变的.</p>
+<p>note:4-&gt;p重新指向b.</p>
+<p>note:5-&gt;退出函数,p的修改并不会对q造成影响。</p>
+<p><strong>结论:</strong></p>
+<p>编译器总是要为函数的每个参数制作临时副本，指针参数p的副本是 p，编译器使 p = q(但是&amp;p != &amp;q,也就是他们并不在同一块内存地址，只是他们的内容一样，都是a的地址)。如果函数体内的程序修改了p的内容(比如在这里它指向b)。在本例中，p申请了新的内存，只是把 p所指的内存地址改变了(变成了b的地址,但是q指向的内存地址没有影响)，所以在这里并不影响函数外的指针q。</p>
+<p>这就需要二级指针操作：</p>
+<h4 id="2-二级指针操作"><a href="#2-二级指针操作" class="headerlink" title="2.二级指针操作"></a>2.二级指针操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;  </span></span><br><span class="line">  </span><br><span class="line">using namespace std;  </span><br><span class="line">  </span><br><span class="line">int a= <span class="number">10</span>;  </span><br><span class="line">int b = <span class="number">100</span>;  </span><br><span class="line">int *q;  </span><br><span class="line">  </span><br><span class="line">void func(int **p)  //<span class="number">2</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  </span><br><span class="line">    *p = &amp;b;  //<span class="number">3</span>  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">int main()  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"&amp;a="</span>&lt;&lt;&amp;a&lt;&lt;<span class="string">",&amp;b="</span>&lt;&lt;&amp;b&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  </span><br><span class="line">    q = &amp;a;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  </span><br><span class="line">    func(&amp;q);  //<span class="number">1</span>  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  </span><br><span class="line">  </span><br><span class="line">    system(<span class="string">"pause"</span>);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里只改了三个地方，变成传二级指针。我们再看:</p>
+<p>因为传了指针q的地址(二级指针*<em>p)到函数,所以二级指针拷贝(拷贝的是p,一级指针中拷贝的是q所以才有问题),（拷贝了指针但是指针内容也就是指针所指向的地址是不变的）所以它还是指向一级指针q(</em>p = q)。在这里无论拷贝多少次，它依然指向q，那么*p = &b;自然的就是 q = &b;了</p>
+<p>3.再看一个例子：<br>我们代码中以二级指针作为参数比较常见的是，定义了一个指针MyClass <em>ptr=NULL，在函数内对指针赋值 </em>ptr=malloc(…)，函数结束后指针依然有效.这个时候就必须要用二级指针作为参数func(MyClass **p,…)，一级指针为什么不行上面说了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void  my_malloc(char **s)    </span><br><span class="line">&#123;    </span><br><span class="line">    *s=(char*)malloc(<span class="number">100</span>);    </span><br><span class="line">&#125;    </span><br><span class="line">   </span><br><span class="line">void  main()    </span><br><span class="line">&#123;    </span><br><span class="line">    char  *p=NULL;    </span><br><span class="line">    my_malloc(&amp;p);  </span><br><span class="line">    //do something  </span><br><span class="line">    <span class="keyword">if</span>(p)  </span><br><span class="line">        free(p);    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里给指针p分配内存，do something,然后free(p),如果用一级指针，那么就相当于给一个p的拷贝s分配内存，p依然没分配内存，用二级指针之后，才对p分配了内存。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/30/Second-Rank-Pointer/" data-id="cjw95mlng001hobsecdvpzrgy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/指针/">指针</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/01/Reverse-List/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Reverse-List
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/30/InsertList/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">链表的插入</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Matlab/">Matlab</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT乙级/">PAT乙级</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT甲级/">PAT甲级</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wechat/">Wechat</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/单链表/">单链表</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/排序/">排序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数模/">数模</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PAT乙级/">PAT乙级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PAT甲级/">PAT甲级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wechat-navigator/">Wechat-navigator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/指针/">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/Matlab/" style="font-size: 12.5px;">Matlab</a> <a href="/tags/Node-JS/" style="font-size: 10px;">Node.JS</a> <a href="/tags/PAT乙级/" style="font-size: 20px;">PAT乙级</a> <a href="/tags/PAT甲级/" style="font-size: 10px;">PAT甲级</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Wechat-navigator/" style="font-size: 10px;">Wechat-navigator</a> <a href="/tags/指针/" style="font-size: 10px;">指针</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a> <a href="/tags/算法与数据结构/" style="font-size: 17.5px;">算法与数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/06/Matalb2017bMAC/">Matalb2017b  MAC</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/PAT-1001-0/">PAT甲级-1001</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/pat-1027/">PAT乙级-1027  打印沙漏(20)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/08/Matlab2017/">Matlab2017a破解与安装</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/30/Wechat-navigator/">Wechat-navigator</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

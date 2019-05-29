@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-pat-1018" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/20/pat-1018/" class="article-date">
+  <time datetime="2018-01-20T04:28:03.000Z" itemprop="datePublished">2018-01-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PAT乙级/">PAT乙级</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/20/pat-1018/">PAT乙级-1018    锤子剪刀布 (20)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    int a = <span class="number">0</span>, b = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line">    int C1 = <span class="number">0</span>, C2 = <span class="number">0</span>, B1 = <span class="number">0</span>, B2 = <span class="number">0</span>, J1 = <span class="number">0</span>, J2 = <span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    char A[n],B[n];</span><br><span class="line">    <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;A[i]&gt;&gt;B[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'C'</span>&amp;&amp;B[i] == <span class="string">'J'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                a++;</span><br><span class="line">                C1++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'C'</span>&amp;&amp;B[i] == <span class="string">'B'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                c++;</span><br><span class="line">                B2++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'C'</span>&amp;&amp;B[i] == <span class="string">'C'</span>)</span><br><span class="line">            b++;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'J'</span>&amp;&amp;B[i] == <span class="string">'C'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                c++;</span><br><span class="line">                C2++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'J'</span>&amp;&amp;B[i] == <span class="string">'B'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                a++;</span><br><span class="line">                J1++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'J'</span>&amp;&amp;B[i] == <span class="string">'J'</span>)</span><br><span class="line">            b++;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'B'</span>&amp;&amp;B[i] == <span class="string">'B'</span>)</span><br><span class="line">            b++;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'B'</span>&amp;&amp;B[i] == <span class="string">'C'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                a++;</span><br><span class="line">                B1++;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[i] == <span class="string">'B'</span>&amp;&amp;B[i] == <span class="string">'J'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                c++;</span><br><span class="line">                J2++;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">" "</span>&lt;&lt;b&lt;&lt;<span class="string">" "</span>&lt;&lt;c&lt;&lt;endl;</span><br><span class="line">    cout&lt;&lt;c&lt;&lt;<span class="string">" "</span>&lt;&lt;b&lt;&lt;<span class="string">" "</span>&lt;&lt;a&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">if</span>(C1 &gt; B1&amp;&amp;C1 &gt;= J1)</span><br><span class="line">        cout&lt;&lt;<span class="string">'C'</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(B1 &gt;= C1&amp;&amp; B1 &gt;= J1)</span><br><span class="line">        cout&lt;&lt;<span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(J1 &gt; B1&amp;&amp; J1 &gt; C1)</span><br><span class="line">        cout&lt;&lt;<span class="string">'J'</span>;</span><br><span class="line">    <span class="keyword">if</span>(C2 &gt; B2&amp;&amp;C2 &gt;= J2)</span><br><span class="line">        cout&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="string">'C'</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(B2 &gt;= C2&amp;&amp; B2 &gt;= J2)</span><br><span class="line">        cout&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="string">'B'</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(J2 &gt; B2&amp;&amp; J2 &gt; C2)</span><br><span class="line">        cout&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="string">'J'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/20/pat-1018/" data-id="cjw95mlo5003nobsepm91jj38" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PAT乙级/">PAT乙级</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reverse-List" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/01/Reverse-List/" class="article-date">
+  <time datetime="2017-12-01T09:41:53.000Z" itemprop="datePublished">2017-12-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/单链表/">单链表</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/01/Reverse-List/">Reverse-List</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="倒置"><a href="#倒置" class="headerlink" title="倒置"></a>倒置</h2><h3 id="一、非递归"><a href="#一、非递归" class="headerlink" title="一、非递归"></a>一、非递归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">void reverseList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">     linkList *p,*temp;</span><br><span class="line">     p = head-&gt;next;  //p指向当前正在处理的节点</span><br><span class="line">     temp = p-&gt;next;  //tmp指向尚未被处理的第一个节点</span><br><span class="line">     p-&gt;next = NULL;  //原单链表第一个节点将成为倒置后最后一个节点  </span><br><span class="line">     head-&gt;next = p;  //插入单链表表头后面  </span><br><span class="line">     p = temp;        //开始处理接下来的节点们 </span><br><span class="line">     <span class="keyword">while</span>(p != NULL)</span><br><span class="line">     &#123;</span><br><span class="line">         temp = p-&gt;next;</span><br><span class="line">         p-&gt;next = head-&gt;next;</span><br><span class="line">         head-&gt;next = p;</span><br><span class="line">         p = temp;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="全代码："><a href="#全代码：" class="headerlink" title="全代码："></a>全代码：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">    char data;</span><br><span class="line">    struct node *next;</span><br><span class="line">&#125;linkList;</span><br><span class="line"></span><br><span class="line">linkList* tailInsertList()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head, *p, *q;</span><br><span class="line">    char ch;</span><br><span class="line">    head = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">    //ch = getchar();</span><br><span class="line">    //head-&gt;data = ch;</span><br><span class="line">    head-&gt;next = NULL;</span><br><span class="line">    q = head;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch != <span class="string">'\n'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">        p-&gt;data = ch;</span><br><span class="line">        q-&gt;next = p;</span><br><span class="line">        q = p;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    q-&gt;next = NULL;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void reverseList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">     linkList *p,*temp;</span><br><span class="line">     p = head-&gt;next;</span><br><span class="line">     temp = p-&gt;next;</span><br><span class="line">     p-&gt;next = NULL;</span><br><span class="line">     head-&gt;next = p;</span><br><span class="line">     p = temp;</span><br><span class="line">     <span class="keyword">while</span>(p != NULL)</span><br><span class="line">     &#123;</span><br><span class="line">         temp = p-&gt;next;</span><br><span class="line">         p-&gt;next = head-&gt;next;</span><br><span class="line">         head-&gt;next = p;</span><br><span class="line">         p = temp;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    linkList *p;</span><br><span class="line">    p = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        printf("%c", p-&gt;data);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head;</span><br><span class="line">    head = tailInsertList();</span><br><span class="line">    reverseList(head);</span><br><span class="line">    printList(head);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二、递归"><a href="#二、递归" class="headerlink" title="二、递归"></a>二、递归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">linkList* reverseList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    // 停止条件</span><br><span class="line">    if (head-&gt;next == NULL)</span><br><span class="line">        <span class="keyword">return</span> head;            // 表示到最后一个节点，返回这个节点当作头结点</span><br><span class="line"></span><br><span class="line">    // 递归</span><br><span class="line">    linkList* prev = reverseList(head-&gt;next);</span><br><span class="line"></span><br><span class="line">    // 操作</span><br><span class="line">    linkList* tmp = head-&gt;next;    // 保存当前节点next</span><br><span class="line">    tmp-&gt;next = head;          // 将当前节点放到其next之后</span><br><span class="line">    head-&gt;next = NULL;         // 将当前节点的next置为NULL</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> prev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="全代码：-1"><a href="#全代码：-1" class="headerlink" title="全代码："></a>全代码：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">    char data;</span><br><span class="line">    struct node *next;</span><br><span class="line">&#125;linkList;</span><br><span class="line"></span><br><span class="line">linkList* tailInsertList()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head, *p, *q;</span><br><span class="line">    char ch;</span><br><span class="line">    head = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">    //ch = getchar();</span><br><span class="line">    //head-&gt;data = ch;</span><br><span class="line">    head-&gt;next = NULL;</span><br><span class="line">    q = head;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch != <span class="string">'\n'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">        p-&gt;data = ch;</span><br><span class="line">        q-&gt;next = p;</span><br><span class="line">        q = p;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    q-&gt;next = NULL;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">linkList* reverseList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    // 停止条件</span><br><span class="line">    if (head-&gt;next == NULL)</span><br><span class="line">        <span class="keyword">return</span> head;            // 表示到最后一个节点，返回这个节点当作头结点</span><br><span class="line"></span><br><span class="line">    // 递归</span><br><span class="line">    linkList* prev = reverseList(head-&gt;next);</span><br><span class="line"></span><br><span class="line">    // 操作</span><br><span class="line">    linkList* tmp = head-&gt;next;    // 保存当前节点next</span><br><span class="line">    tmp-&gt;next = head;          // 将当前节点放到其next之后</span><br><span class="line">    head-&gt;next = NULL;         // 将当前节点的next置为NULL</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> prev;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    linkList *p;</span><br><span class="line">    p = head;</span><br><span class="line">    <span class="keyword">while</span>(p != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        printf("%c", p-&gt;data);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head,*prev;</span><br><span class="line">    head = tailInsertList();</span><br><span class="line">    prev = reverseList(head);</span><br><span class="line">    printList(prev);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/12/01/Reverse-List/" data-id="cjw95mlnf001cobsek2tj97yd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Second-Rank-Pointer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/30/Second-Rank-Pointer/" class="article-date">
+  <time datetime="2017-11-30T15:14:55.000Z" itemprop="datePublished">2017-11-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C语言/">C语言</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/30/Second-Rank-Pointer/">二级指针</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="二级指针"><a href="#二级指针" class="headerlink" title="二级指针"></a>二级指针</h2><h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><p>在如下的A指向B、B指向C的指向关系中：<br>首先<br>C是”一段内容”,比如你用malloc或者new分配了一块内存，然后塞进去”一段内容”,那就是C了。C的起始地址是0x00000008。<br>B是一个指针变量,其中存放着C的地址，但是B也要占空间的啊，所以B也有地址，B的起始地址是0x00000004,但是B内存中存放的是C的地址，所以B里面的内容就是0x00000008。</p>
+<p>那么到此为止都比较好理解:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">B= <span class="number">0x00000008</span>;  //B的内容   </span><br><span class="line">*B = <span class="string">"一段内容"</span>;  //B解引用，也就是B指针指向的C的值  </span><br><span class="line">&amp;B = <span class="number">0x00000004</span>;  //B取地址，B的地址是<span class="number">0x00000004</span></span><br></pre></td></tr></table></figure></p>
+<p>那么，再来看A：<br>A是二级指针变量，其中存放着B的地址0x00000004,A也有地址，是0x00000000;<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*A = B= <span class="number">0x00000008</span>;  //A解引用也就是B的内容   </span><br><span class="line">**A = *B = <span class="string">"一段内容"</span>;  //B解引用，也就是B指针指向的C的值  </span><br><span class="line">A = &amp;B = <span class="number">0x00000004</span>;  //A存的是B的地址，B的地址是<span class="number">0x00000004</span>  </span><br><span class="line">&amp;A = <span class="number">0x00000000</span>;  //A取地址</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://img.blog.csdn.net/20150624234831842" alt="二级指针"></p>
+<h3 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h3><p>二级指针作为函数参数的作用:在函数外部定义一个指针p，在函数内给指针赋值，函数结束后对指针p生效，那么我们就需要二级指针。</p>
+<p>看看下面一段代码：有两个变量a,b,指针q,q指向a，我们想让q指向b,在函数里面实现。</p>
+<h4 id="1-先看看一级指针的实现"><a href="#1-先看看一级指针的实现" class="headerlink" title="1.先看看一级指针的实现"></a>1.先看看一级指针的实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;  </span></span><br><span class="line">  </span><br><span class="line">using namespace std;  </span><br><span class="line">  </span><br><span class="line">int a= <span class="number">10</span>;  </span><br><span class="line">int b = <span class="number">100</span>;  </span><br><span class="line">int *q;  </span><br><span class="line">  </span><br><span class="line">void func(int *p)  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  //note:<span class="number">3</span>  </span><br><span class="line">    p = &amp;b;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  //note:<span class="number">4</span>  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">int main()  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"&amp;a="</span>&lt;&lt;&amp;a&lt;&lt;<span class="string">",&amp;b="</span>&lt;&lt;&amp;b&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  //note:<span class="number">1</span>  </span><br><span class="line">    q = &amp;a;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  //note:<span class="number">2</span>  </span><br><span class="line">    func(q);  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  //note:<span class="number">5</span>  </span><br><span class="line">  </span><br><span class="line">    system(<span class="string">"pause"</span>);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 这么写有什么问题？为什么*q不等于100？我们看一下输出便知：</p>
+<p>&amp;a=0032F000,&amp;b=0032F004,&amp;q=0032F228<br><em>q=10,q=0032F000,&amp;q=0032F228<br>func:&amp;p=0018FD24,p=0032F000<br>func:&amp;p=0018FD24,p=0032F004
+</em>q=10,q=0032F000,&amp;q=0032F228</p>
+<p>我们看输出:</p>
+<p>note:1-&gt;a,b,q都有一个地址.</p>
+<p>note:2-&gt;q指向a.</p>
+<p>note:3-&gt;我们发现参数p的地址变了,跟q不一样了，是的参数传递是制作了一个副本,也就是p和q不是同一个指针,但是指向的地址0x0032F000(a的地址)还是不变的.</p>
+<p>note:4-&gt;p重新指向b.</p>
+<p>note:5-&gt;退出函数,p的修改并不会对q造成影响。</p>
+<p><strong>结论:</strong></p>
+<p>编译器总是要为函数的每个参数制作临时副本，指针参数p的副本是 p，编译器使 p = q(但是&amp;p != &amp;q,也就是他们并不在同一块内存地址，只是他们的内容一样，都是a的地址)。如果函数体内的程序修改了p的内容(比如在这里它指向b)。在本例中，p申请了新的内存，只是把 p所指的内存地址改变了(变成了b的地址,但是q指向的内存地址没有影响)，所以在这里并不影响函数外的指针q。</p>
+<p>这就需要二级指针操作：</p>
+<h4 id="2-二级指针操作"><a href="#2-二级指针操作" class="headerlink" title="2.二级指针操作"></a>2.二级指针操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;  </span></span><br><span class="line">  </span><br><span class="line">using namespace std;  </span><br><span class="line">  </span><br><span class="line">int a= <span class="number">10</span>;  </span><br><span class="line">int b = <span class="number">100</span>;  </span><br><span class="line">int *q;  </span><br><span class="line">  </span><br><span class="line">void func(int **p)  //<span class="number">2</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  </span><br><span class="line">    *p = &amp;b;  //<span class="number">3</span>  </span><br><span class="line">    cout&lt;&lt;<span class="string">"func:&amp;p="</span>&lt;&lt;&amp;p&lt;&lt;<span class="string">",p="</span>&lt;&lt;p&lt;&lt;endl;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">int main()  </span><br><span class="line">&#123;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"&amp;a="</span>&lt;&lt;&amp;a&lt;&lt;<span class="string">",&amp;b="</span>&lt;&lt;&amp;b&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  </span><br><span class="line">    q = &amp;a;  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  </span><br><span class="line">    func(&amp;q);  //<span class="number">1</span>  </span><br><span class="line">    cout&lt;&lt;<span class="string">"*q="</span>&lt;&lt;*q&lt;&lt;<span class="string">",q="</span>&lt;&lt;q&lt;&lt;<span class="string">",&amp;q="</span>&lt;&lt;&amp;q&lt;&lt;endl;  </span><br><span class="line">  </span><br><span class="line">    system(<span class="string">"pause"</span>);  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里只改了三个地方，变成传二级指针。我们再看:</p>
+<p>因为传了指针q的地址(二级指针*<em>p)到函数,所以二级指针拷贝(拷贝的是p,一级指针中拷贝的是q所以才有问题),（拷贝了指针但是指针内容也就是指针所指向的地址是不变的）所以它还是指向一级指针q(</em>p = q)。在这里无论拷贝多少次，它依然指向q，那么*p = &b;自然的就是 q = &b;了</p>
+<p>3.再看一个例子：<br>我们代码中以二级指针作为参数比较常见的是，定义了一个指针MyClass <em>ptr=NULL，在函数内对指针赋值 </em>ptr=malloc(…)，函数结束后指针依然有效.这个时候就必须要用二级指针作为参数func(MyClass **p,…)，一级指针为什么不行上面说了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void  my_malloc(char **s)    </span><br><span class="line">&#123;    </span><br><span class="line">    *s=(char*)malloc(<span class="number">100</span>);    </span><br><span class="line">&#125;    </span><br><span class="line">   </span><br><span class="line">void  main()    </span><br><span class="line">&#123;    </span><br><span class="line">    char  *p=NULL;    </span><br><span class="line">    my_malloc(&amp;p);  </span><br><span class="line">    //do something  </span><br><span class="line">    <span class="keyword">if</span>(p)  </span><br><span class="line">        free(p);    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里给指针p分配内存，do something,然后free(p),如果用一级指针，那么就相当于给一个p的拷贝s分配内存，p依然没分配内存，用二级指针之后，才对p分配了内存。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/30/Second-Rank-Pointer/" data-id="cjw95mlng001hobsecdvpzrgy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/指针/">指针</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-InsertList" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/30/InsertList/" class="article-date">
+  <time datetime="2017-11-30T14:45:24.000Z" itemprop="datePublished">2017-11-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/单链表/">单链表</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/30/InsertList/">链表的插入</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="头插法"><a href="#头插法" class="headerlink" title="头插法"></a>头插法</h2><p>该方法从一个空表开始，生成新结点，并将读取到的数据存放到新结点的数据域中，然后将新结点插入到当前链表的表头，即头结点之后，如图所示。<br><img src="http://c.biancheng.net/cpp/uploads/allimg/140709/1-140F9152T3201.jpg" alt="image"></p>
+<h3 id="有头结点头插法："><a href="#有头结点头插法：" class="headerlink" title="有头结点头插法："></a>有头结点头插法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">    char data;</span><br><span class="line">    struct node *next;</span><br><span class="line">&#125;linkList;</span><br><span class="line"></span><br><span class="line">linkList* headInsertList()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head,*p;</span><br><span class="line">    char ch;</span><br><span class="line">    head = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">    //head = NULL;</span><br><span class="line">    head-&gt;next = NULL;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch != <span class="string">'\n'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">        p-&gt;data = ch;</span><br><span class="line">        p-&gt;next = head-&gt;next;</span><br><span class="line">        head-&gt;next = p;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    linkList *p;</span><br><span class="line">    p = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        printf("%c", p-&gt;data);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head;</span><br><span class="line">    head = headInsertList();</span><br><span class="line">    printList(head);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="无头结点头插法："><a href="#无头结点头插法：" class="headerlink" title="无头结点头插法："></a>无头结点头插法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">    char data;</span><br><span class="line">    struct node *next;</span><br><span class="line">&#125;linkList;</span><br><span class="line"></span><br><span class="line">linkList* headInsertList()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head,*p;</span><br><span class="line">    char ch;</span><br><span class="line">    head = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">    head = NULL;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch != <span class="string">'\n'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">        p-&gt;data = ch;</span><br><span class="line">        p-&gt;next = head;</span><br><span class="line">        head = p;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    linkList *p;</span><br><span class="line">    p = head;</span><br><span class="line">    <span class="keyword">while</span>(p != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        printf("%c", p-&gt;data);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head;</span><br><span class="line">    head = headInsertList();</span><br><span class="line">    printList(head);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="尾插法"><a href="#尾插法" class="headerlink" title="尾插法"></a>尾插法</h2><p>头插法建立单链表的算法虽然简单，但生成的链表中结点的次序和输入数据的顺序不一致。若希望两者次序一致，可采用尾插法。该方法是将新结点插入到当前链表的表尾上，为此必须增加一个尾指针r,使其始终指向当前链表的尾结点，如图所示。<br><img src="http://c.biancheng.net/cpp/uploads/allimg/140709/1-140F9153GJ93.jpg" alt="尾插"></p>
+<h3 id="有头结点尾插法："><a href="#有头结点尾插法：" class="headerlink" title="有头结点尾插法："></a>有头结点尾插法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">    char data;</span><br><span class="line">    struct node *next;</span><br><span class="line">&#125;linkList;</span><br><span class="line"></span><br><span class="line">linkList* tailInsertList()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head, *p, *q;</span><br><span class="line">    char ch;</span><br><span class="line">    head = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">    head-&gt;next = NULL;</span><br><span class="line">    q = head;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch != <span class="string">'\n'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">        p-&gt;data = ch;</span><br><span class="line">        q-&gt;next = p;</span><br><span class="line">        q = p;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    q-&gt;next = NULL;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    linkList *p;</span><br><span class="line">    p = head-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        printf("%c", p-&gt;data);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head;</span><br><span class="line">    head = tailInsertList();</span><br><span class="line">    printList(head);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="无头结点尾插法："><a href="#无头结点尾插法：" class="headerlink" title="无头结点尾插法："></a>无头结点尾插法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">typedef struct node</span><br><span class="line">&#123;</span><br><span class="line">    char data;</span><br><span class="line">    struct node *next;</span><br><span class="line">&#125;linkList;</span><br><span class="line"></span><br><span class="line">linkList* tailInsertList()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head, *p, *q;</span><br><span class="line">    char ch;</span><br><span class="line">    head = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">    ch = getchar();</span><br><span class="line">    head-&gt;data = ch;</span><br><span class="line">    q = head;</span><br><span class="line">    ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch != <span class="string">'\n'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (linkList*)malloc(sizeof(linkList));</span><br><span class="line">        p-&gt;data = ch;</span><br><span class="line">        q-&gt;next = p;</span><br><span class="line">        q = p;</span><br><span class="line">        ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    q-&gt;next = NULL;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printList(linkList *head)</span><br><span class="line">&#123;</span><br><span class="line">    linkList *p;</span><br><span class="line">    p = head;</span><br><span class="line">    <span class="keyword">while</span>(p != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        printf("%c", p-&gt;data);</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    linkList *head;</span><br><span class="line">    head = tailInsertList();</span><br><span class="line">    printList(head);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/30/InsertList/" data-id="cjw95mlmx000bobse6jstrktm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MergeSort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/MergeSort/" class="article-date">
+  <time datetime="2017-11-28T06:47:14.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/排序/">排序</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/28/MergeSort/">归并排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p> 归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。</p>
+<p>首先考虑下如何将将二个有序数列合并。这个非常简单，只要从比较二个数列的第一个数，谁小就先取谁，取了后就在对应数列中删除这个数。然后再进行比较，如果有数列为空，那直接将另一个数列的数据依次取出即可。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//将有序数组a[]和b[]合并到c[]中  </span><br><span class="line">void MemeryArray(int a[], int n, int b[], int m, int c[])  </span><br><span class="line">&#123;  </span><br><span class="line">    int i, j, k;  </span><br><span class="line">  </span><br><span class="line">    i = j = k = <span class="number">0</span>;  </span><br><span class="line">    <span class="keyword">while</span> (i &lt; n &amp;&amp; j &lt; m)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span> (a[i] &lt; b[j])  </span><br><span class="line">            c[k++] = a[i++];  </span><br><span class="line">        <span class="keyword">else</span>  </span><br><span class="line">            c[k++] = b[j++];   </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">while</span> (i &lt; n)  </span><br><span class="line">        c[k++] = a[i++];  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">while</span> (j &lt; m)  </span><br><span class="line">        c[k++] = b[j++];  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 可以看出合并有序数列的效率是比较高的，可以达到O(n)。</p>
+<p>解决了上面的合并有序数列问题，再来看归并排序，其的基本思路就是将数组分成二组A，B，如果这二组组内的数据都是有序的，那么就可以很方便的将这二组数据进行排序。如何让这二组组内数据有序了？</p>
+<p>可以将A，B组各自再分成二组。依次类推，当分出来的小组只有一个数据时，可以认为这个小组组内已经达到了有序，然后再合并相邻的二个小组就可以了。这样通过先递归的分解数列，再合并数列就完成了归并排序。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//将有二个有序数列a[first...mid]和a[mid...last]合并。  </span><br><span class="line">void mergearray(int a[], int first, int mid, int last, int temp[])  </span><br><span class="line">&#123;  </span><br><span class="line">    int i = first, j = mid + <span class="number">1</span>;  </span><br><span class="line">    int m = mid,   n = last;  </span><br><span class="line">    int k = <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">    <span class="keyword">while</span> (i &lt;= m &amp;&amp; j &lt;= n)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span> (a[i] &lt;= a[j])  </span><br><span class="line">            temp[k++] = a[i++];  </span><br><span class="line">        <span class="keyword">else</span>  </span><br><span class="line">            temp[k++] = a[j++];  </span><br><span class="line">    &#125;  </span><br><span class="line">      </span><br><span class="line">    <span class="keyword">while</span> (i &lt;= m)  </span><br><span class="line">        temp[k++] = a[i++];  </span><br><span class="line">      </span><br><span class="line">    <span class="keyword">while</span> (j &lt;= n)  </span><br><span class="line">        temp[k++] = a[j++];  </span><br><span class="line">      </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; k; i++)  </span><br><span class="line">        a[first + i] = temp[i];  </span><br><span class="line">&#125;  </span><br><span class="line">void mergesort(int a[], int first, int last, int temp[])  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">if</span> (first &lt; last)  </span><br><span class="line">    &#123;  </span><br><span class="line">        int mid = (first + last) / <span class="number">2</span>;  </span><br><span class="line">        mergesort(a, first, mid, temp);    //左边有序  </span><br><span class="line">        mergesort(a, mid + <span class="number">1</span>, last, temp); //右边有序  </span><br><span class="line">        mergearray(a, first, mid, last, temp); //再将二个有序数列合并  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">bool MergeSort(int a[], int n)  </span><br><span class="line">&#123;  </span><br><span class="line">    int *p = new int[n];  </span><br><span class="line">    <span class="keyword">if</span> (p == NULL)  </span><br><span class="line">        <span class="keyword">return</span> false;  </span><br><span class="line">    mergesort(a, <span class="number">0</span>, n - <span class="number">1</span>, p);  </span><br><span class="line">    delete[] p;  </span><br><span class="line">    <span class="keyword">return</span> true;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>归并排序的效率是比较高的，设数列长为N，将数列分开成小数列一共要logN步，每步都是一个合并有序数列的过程，时间复杂度可以记为O(N)，故一共为O(N<em>logN)。因为归并排序每次都是在相邻的数据中进行操作，所以归并排序在O(N</em>logN)的几种排序方法（快速排序，归并排序，希尔排序，堆排序）也是效率比较高的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/MergeSort/" data-id="cjw95mln8000uobsexb37pvz5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HeapSort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/HeapSort/" class="article-date">
+  <time datetime="2017-11-28T06:43:00.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/排序/">排序</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/28/HeapSort/">堆排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>1.堆</p>
+<p>  堆实际上是一棵完全二叉树，其任何一非叶节点满足性质：</p>
+<p>  Key[i]&lt;=key[2i+1]&amp;&amp;Key[i]&lt;=key[2i+2]或者Key[i]&gt;=Key[2i+1]&amp;&amp;key&gt;=key[2i+2]</p>
+<p>  即任何一非叶节点的关键字不大于或者不小于其左右孩子节点的关键字。</p>
+<p>  堆分为大顶堆和小顶堆，满足Key[i]&gt;=Key[2i+1]&amp;&amp;key&gt;=key[2i+2]称为大顶堆，满足 Key[i]&lt;=key[2i+1]&amp;&amp;Key[i]&lt;=key[2i+2]称为小顶堆。由上述性质可知大顶堆的堆顶的关键字肯定是所有关键字中最大的，小顶堆的堆顶的关键字是所有关键字中最小的。</p>
+<p>2.堆排序的思想</p>
+<p>   利用大顶堆(小顶堆)堆顶记录的是最大关键字(最小关键字)这一特性，使得每次从无序中选择最大记录(最小记录)变得简单。</p>
+<p>其基本思想为(大顶堆)：</p>
+<p>1)将初始待排序关键字序列(R1,R2….Rn)构建成大顶堆，此堆为初始的无须区；</p>
+<p>2)将堆顶元素R[1]与最后一个元素R[n]交换，此时得到新的无序区(R1,R2,……Rn-1)和新的有序区(Rn),且满足R[1,2…n-1]&lt;=R[n]; </p>
+<p>3)由于交换后新的堆顶R[1]可能违反堆的性质，因此需要对当前无序区(R1,R2,……Rn-1)调整为新堆，然后再次将R[1]与无序区最后一个元素交换，得到新的无序区(R1,R2….Rn-2)和新的有序区(Rn-1,Rn)。不断重复此过程直到有序区的元素个数为n-1，则整个排序过程完成。</p>
+<p>操作过程如下：</p>
+<p>1)初始化堆：将R[1..n]构造为堆；</p>
+<p>2)将当前无序区的堆顶元素R[1]同该区间的最后一个记录交换，然后将新的无序区调整为新的堆。</p>
+<p>因此对于堆排序，最重要的两个操作就是构造初始堆和调整堆，其实构造初始堆事实上也是调整堆的过程，只不过构造初始堆是对所有的非叶节点都进行调整。</p>
+<p>下面举例说明：</p>
+<p>给定一个整形数组a[]={16,7,3,20,17,8}，对其进行堆排序。</p>
+<p>首先根据该数组元素构建一个完全二叉树，得到</p>
+<p> 然后需要构造初始堆，则从最后一个非叶节点开始调整，调整过程如下：</p>
+<p>20和16交换后导致16不满足堆的性质，因此需重新调整</p>
+<p>这样就得到了初始堆。<br>即每次调整都是从父节点、左孩子节点、右孩子节点三者中选择最大者跟父节点进行交换(交换之后可能造成被交换的孩子节点不满足堆的性质，因此每次交换之后要重新对被交换的孩子节点进行调整)。有了初始堆之后就可以进行排序了。</p>
+<p>此时3位于堆顶不满堆的性质，则需调整继续调整</p>
+<p> 这样整个区间便已经有序了。<br>    从上述过程可知，堆排序其实也是一种选择排序，是一种树形选择排序。只不过直接选择排序中，为了从R[1…n]中选择最大记录，需比较n-1次，然后从R[1…n-2]中选择最大记录需比较n-2次。事实上这n-2次比较中有很多已经在前面的n-1次比较中已经做过，而树形选择排序恰好利用树形的特点保存了部分前面的比较结果，因此可以减少比较次数。对于n个关键字序列，最坏情况下每个节点需比较log2(n)次，因此其最坏情况下时间复杂度为nlogn。堆排序为不稳定排序，不适合记录较少的排序。</p>
+<p>测试程序:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void HeapAdjust(int *a,int i,int size)  //调整堆 </span><br><span class="line">&#123;</span><br><span class="line">    int lchild=<span class="number">2</span>*i;       //i的左孩子节点序号 </span><br><span class="line">    int rchild=<span class="number">2</span>*i+<span class="number">1</span>;     //i的右孩子节点序号 </span><br><span class="line">    int max=i;            //临时变量 </span><br><span class="line">    <span class="keyword">if</span>(i&lt;=size/<span class="number">2</span>)          //如果i不是叶节点就不用进行调整 </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(lchild&lt;=size&amp;&amp;a[lchild]&gt;a[max])</span><br><span class="line">        &#123;</span><br><span class="line">            max=lchild;</span><br><span class="line">        &#125;    </span><br><span class="line">        <span class="keyword">if</span>(rchild&lt;=size&amp;&amp;a[rchild]&gt;a[max])</span><br><span class="line">        &#123;</span><br><span class="line">            max=rchild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(max!=i)</span><br><span class="line">        &#123;</span><br><span class="line">            swap(a[i],a[max]);</span><br><span class="line">            HeapAdjust(a,max,size);    //避免调整之后以max为父节点的子树不是堆 </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;        </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void BuildHeap(int *a,int size)    //建立堆 </span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    <span class="keyword">for</span>(i=size/<span class="number">2</span>;i&gt;=<span class="number">1</span>;i--)    //非叶节点最大序号值为size/<span class="number">2</span> </span><br><span class="line">    &#123;</span><br><span class="line">        HeapAdjust(a,i,size);    </span><br><span class="line">    &#125;    </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">void HeapSort(int *a,int size)    //堆排序 </span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    BuildHeap(a,size);</span><br><span class="line">    <span class="keyword">for</span>(i=size;i&gt;=<span class="number">1</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        //cout&lt;&lt;a[<span class="number">1</span>]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        swap(a[<span class="number">1</span>],a[i]);           //交换堆顶和最后一个元素，即每次将剩余元素中的最大者放到最后面 </span><br><span class="line">          //BuildHeap(a,i<span class="number">-1</span>);        //将余下元素重新建立为大顶堆 </span><br><span class="line">          HeapAdjust(a,<span class="number">1</span>,i<span class="number">-1</span>);      //重新调整堆顶节点成为大顶堆</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">int main(int argc, char *argv[])</span><br><span class="line">&#123;</span><br><span class="line">     //int a[]=&#123;<span class="number">0</span>,<span class="number">16</span>,<span class="number">20</span>,<span class="number">3</span>,<span class="number">11</span>,<span class="number">17</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    int a[<span class="number">100</span>];</span><br><span class="line">    int size;</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d"</span>,&amp;size)==<span class="number">1</span>&amp;&amp;size&gt;<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        int i;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=size;i++)</span><br><span class="line">            cin&gt;&gt;a[i];</span><br><span class="line">        HeapSort(a,size);</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=size;i++)</span><br><span class="line">            cout&lt;&lt;a[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/HeapSort/" data-id="cjw95mln3000gobse0aif15tq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SelectionSort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/SelectionSort/" class="article-date">
+  <time datetime="2017-11-28T06:41:04.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/排序/">排序</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/28/SelectionSort/">选择排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><h3 id="一-算法描述"><a href="#一-算法描述" class="headerlink" title="一. 算法描述"></a>一. 算法描述</h3><p>选择排序：比如在一个长度为N的无序数组中，在第一趟遍历N个数据，找出其中最小的数值与第一个元素交换，第二趟遍历剩下的N-1个数据，找出其中最小的数值与第二个元素交换……第N-1趟遍历剩下的2个数据，找出其中最小的数值与第N-1个元素交换，至此选择排序完成。</p>
+<p>以下面5个无序的数据为例：</p>
+<p>56 12 80 91 20（文中仅细化了第一趟的选择过程）</p>
+<p>第1趟：12 56 80 91 20</p>
+<p>第2趟：12 20 80 91 56</p>
+<p>第3趟：12 20 56 91 80</p>
+<p>第4趟：12 20 56 80 91</p>
+<h3 id="二-算法分析"><a href="#二-算法分析" class="headerlink" title="二. 算法分析"></a>二. 算法分析</h3><p>平均时间复杂度：O(n2)</p>
+<p>空间复杂度：O(1)  (用于交换和记录索引)</p>
+<p>稳定性：不稳定 （比如序列【5， 5， 3】第一趟就将第一个[5]与[3]交换，导致第一个5挪动到第二个5后面）</p>
+<h3 id="三-算法实现"><a href="#三-算法实现" class="headerlink" title="三. 算法实现"></a>三. 算法实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//交换data1和data2所指向的整形  </span><br><span class="line">void DataSwap(int* data1, int* data2)  </span><br><span class="line">&#123;  </span><br><span class="line">    int temp = *data1;  </span><br><span class="line">    *data1 = *data2;  </span><br><span class="line">    *data2 = temp;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">/******************************************************** </span><br><span class="line">*函数名称：SelectionSort </span><br><span class="line">*参数说明：pDataArray 无序数组； </span><br><span class="line">*          iDataNum为无序数据个数 </span><br><span class="line">*说明：    选择排序 </span><br><span class="line">*********************************************************/  </span><br><span class="line">void SelectionSort(int* pDataArray, int iDataNum)  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; iDataNum - <span class="number">1</span>; i++)    //从第一个位置开始  </span><br><span class="line">    &#123;  </span><br><span class="line">        int index = i;  </span><br><span class="line">        <span class="keyword">for</span> (int j = i + <span class="number">1</span>; j &lt; iDataNum; j++)    //寻找最小的数据索引   </span><br><span class="line">            <span class="keyword">if</span> (pDataArray[j] &lt; pDataArray[index])  </span><br><span class="line">                index = j;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">if</span> (index != i)    //如果最小数位置变化则交换  </span><br><span class="line">            DataSwap(&amp;pDataArray[index], &amp;pDataArray[i]);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/SelectionSort/" data-id="cjw95mlnh001kobsej9f17tv7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-QuickSort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/QuickSort/" class="article-date">
+  <time datetime="2017-11-28T06:36:49.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/排序/">排序</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/28/QuickSort/">快速排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="快速排序1"><a href="#快速排序1" class="headerlink" title="快速排序1"></a>快速排序1</h2><p>快速排序是C.R.A.Hoare于1962年提出的一种划分交换排序。它采用了一种分治的策略，通常称其为分治法(Divide-and-ConquerMethod)。</p>
+<p>该方法的基本思想是：</p>
+<p>1．先从数列中取出一个数作为基准数。</p>
+<p>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。</p>
+<p>3．再对左右区间重复第二步，直到各区间只有一个数。</p>
+<p>虽然快速排序称为分治法，但分治法这三个字显然无法很好的概括快速排序的全部步骤。因此我的对快速排序作了进一步的说明：挖坑填数+分治法：</p>
+<p>先来看实例吧，定义下面再给出（最好能用自己的话来总结定义，这样对实现代码会有帮助）。</p>
+<p>以一个数组作为示例，取区间第一个数为基准数。</p>
+<p>0 1 2 3 4 5 6 7 8 9<br>72<br>6<br>57<br>88<br>60<br>42<br>83<br>73<br>48<br>85</p>
+<p>初始时，i = 0;  j = 9;   X = a[i] = 72</p>
+<p>由于已经将a[0]中的数保存到X中，可以理解成在数组a[0]上挖了个坑，可以将其它数据填充到这来。</p>
+<p>从j开始向前找一个比X小或等于X的数。当j=8，符合条件，将a[8]挖出再填到上一个坑a[0]中。a[0]=a[8]; i++;  这样一个坑a[0]就被搞定了，但又形成了一个新坑a[8]，这怎么办了？简单，再找数字来填a[8]这个坑。这次从i开始向后找一个大于X的数，当i=3，符合条件，将a[3]挖出再填到上一个坑中a[8]=a[3]; j–;</p>
+<p>数组变为：</p>
+<p>0 1 2 3 4 5 6  7 8 9</p>
+<p>48<br>6<br>57<br>88<br>60<br>42<br>83<br>73<br>88<br>85</p>
+<p> i = 3;   j = 7;   X=72</p>
+<p>再重复上面的步骤，先从后向前找，再从前向后找。</p>
+<p>从j开始向前找，当j=5，符合条件，将a[5]挖出填到上一个坑中，a[3] = a[5]; i++;</p>
+<p>从i开始向后找，当i=5时，由于i==j退出。</p>
+<p>此时，i = j = 5，而a[5]刚好又是上次挖的坑，因此将X填入a[5]。</p>
+<p>数组变为：</p>
+<p>0   1  2  3 4 5 6 7 8 9</p>
+<p>48  6 57 42 60 72 83 73 88 85</p>
+<p>可以看出a[5]前面的数字都小于它，a[5]后面的数字都大于它。因此再对a[0…4]和a[6…9]这二个子区间重复上述步骤就可以了。</p>
+<p>对挖坑填数进行总结</p>
+<p>1．i =L; j = R; 将基准数挖出形成第一个坑a[i]。</p>
+<p>2．j–由后向前找比它小的数，找到后挖出此数填前一个坑a[i]中。</p>
+<p>3．i++由前向后找比它大的数，找到后也挖出此数填到前一个坑a[j]中。</p>
+<p>4．再重复执行2，3二步，直到i==j，将基准数填入a[i]中。</p>
+<p>照着这个总结很容易实现挖坑填数的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">int AdjustArray(int s[], int l, int r) //返回调整后基准数的位置</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">       int i = l, j = r;</span><br><span class="line"></span><br><span class="line">       int x = s[l]; //s[l]即s[i]就是第一个坑</span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span> (i &lt; j)</span><br><span class="line"></span><br><span class="line">       &#123;</span><br><span class="line"></span><br><span class="line">              // 从右向左找小于x的数来填s[i]</span><br><span class="line"></span><br><span class="line">              <span class="keyword">while</span>(i &lt; j &amp;&amp; s[j] &gt;= x)</span><br><span class="line"></span><br><span class="line">                     j--; </span><br><span class="line"></span><br><span class="line">              <span class="keyword">if</span>(i &lt; j)</span><br><span class="line"></span><br><span class="line">              &#123;</span><br><span class="line"></span><br><span class="line">                     s[i] = s[j]; //将s[j]填到s[i]中，s[j]就形成了一个新的坑</span><br><span class="line"></span><br><span class="line">                     i++;</span><br><span class="line"></span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">              // 从左向右找大于或等于x的数来填s[j]</span><br><span class="line"></span><br><span class="line">              <span class="keyword">while</span>(i &lt; j &amp;&amp; s[i] &lt; x)</span><br><span class="line"></span><br><span class="line">                     i++; </span><br><span class="line"></span><br><span class="line">              <span class="keyword">if</span>(i &lt; j)</span><br><span class="line"></span><br><span class="line">              &#123;</span><br><span class="line"></span><br><span class="line">                     s[j] = s[i]; //将s[i]填到s[j]中，s[i]就形成了一个新的坑</span><br><span class="line"></span><br><span class="line">                     j--;</span><br><span class="line"></span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       //退出时，i等于j。将x填到这个坑中。</span><br><span class="line"></span><br><span class="line">       s[i] = x;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> i;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>再写分治法的代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">void quick_sort1(int s[], int l, int r)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (l &lt; r)</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">              int i = AdjustArray(s, l, r);//先成挖坑填数法调整s[]</span><br><span class="line"></span><br><span class="line">              quick_sort1(s, l, i - <span class="number">1</span>); // 递归调用</span><br><span class="line"></span><br><span class="line">              quick_sort1(s, i + <span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样的代码显然不够简洁，对其组合整理下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">//快速排序</span><br><span class="line"></span><br><span class="line">void quick_sort(int s[], int l, int r)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (l &lt; r)</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">              //Swap(s[l], s[(l + r) / <span class="number">2</span>]); //将中间的这个数和第一个数交换 参见注<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        int i = l, j = r, x = s[l];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (i &lt; j)</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(i &lt; j &amp;&amp; s[j] &gt;= x) // 从右向左找第一个小于x的数</span><br><span class="line"></span><br><span class="line">                            j--; </span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(i &lt; j)</span><br><span class="line"></span><br><span class="line">                            s[i++] = s[j];</span><br><span class="line"></span><br><span class="line">                    </span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(i &lt; j &amp;&amp; s[i] &lt; x) // 从左向右找第一个大于等于x的数</span><br><span class="line"></span><br><span class="line">                            i++; </span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(i &lt; j)</span><br><span class="line"></span><br><span class="line">                            s[j--] = s[i];</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        s[i] = x;</span><br><span class="line"></span><br><span class="line">        quick_sort(s, l, i - <span class="number">1</span>); // 递归调用</span><br><span class="line"></span><br><span class="line">        quick_sort(s, i + <span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="快速排序2"><a href="#快速排序2" class="headerlink" title="快速排序2"></a>快速排序2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt; </span></span><br><span class="line">int a[<span class="number">101</span>],n;//定义全局变量，这两个变量需要在子函数中使用 </span><br><span class="line">void quicksort(int left,int right) </span><br><span class="line">&#123; </span><br><span class="line">    int i,j,t,temp; </span><br><span class="line">    <span class="keyword">if</span>(left&gt;right) </span><br><span class="line">       <span class="keyword">return</span>; </span><br><span class="line">                                </span><br><span class="line">    temp=a[left]; //temp中存的就是基准数 </span><br><span class="line">    i=left; </span><br><span class="line">    j=right; </span><br><span class="line">    <span class="keyword">while</span>(i!=j) </span><br><span class="line">    &#123; </span><br><span class="line">                   //顺序很重要，要先从右边开始找 </span><br><span class="line">                   <span class="keyword">while</span>(a[j]&gt;=temp &amp;&amp; i&lt;j) </span><br><span class="line">                            j--; </span><br><span class="line">                   //再找右边的 </span><br><span class="line">                   <span class="keyword">while</span>(a[i]&lt;=temp &amp;&amp; i&lt;j) </span><br><span class="line">                            i++; </span><br><span class="line">                   //交换两个数在数组中的位置 </span><br><span class="line">                   <span class="keyword">if</span>(i&lt;j) </span><br><span class="line">                   &#123; </span><br><span class="line">                            t=a[i]; </span><br><span class="line">                            a[i]=a[j]; </span><br><span class="line">                            a[j]=t; </span><br><span class="line">                   &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    //最终将基准数归位 </span><br><span class="line">    a[left]=a[i]; </span><br><span class="line">    a[i]=temp; </span><br><span class="line">                             </span><br><span class="line">    quicksort(left,i<span class="number">-1</span>);//继续处理左边的，这里是一个递归的过程 </span><br><span class="line">    quicksort(i+<span class="number">1</span>,right);//继续处理右边的 ，这里是一个递归的过程 </span><br><span class="line">&#125; </span><br><span class="line">int main() </span><br><span class="line">&#123; </span><br><span class="line">    int i,j,t; </span><br><span class="line">    //读入数据 </span><br><span class="line">    scanf(<span class="string">"%d"</span>,&amp;n); </span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++) </span><br><span class="line">                   scanf(<span class="string">"%d"</span>,&amp;a[i]); </span><br><span class="line">    quicksort(<span class="number">1</span>,n); //快速排序调用 </span><br><span class="line">                             </span><br><span class="line">    //输出排序后的结果 </span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++) </span><br><span class="line">        printf(<span class="string">"%d "</span>,a[i]); </span><br><span class="line">    getchar();getchar(); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/QuickSort/" data-id="cjw95mlnb0015obse009mfwxx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-BubbleSort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/BubbleSort/" class="article-date">
+  <time datetime="2017-11-28T06:35:26.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/排序/">排序</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/28/BubbleSort/">冒泡排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>先尝试用最简单的想法去实现排序，以此来比较学习冒泡排序</p>
+<p>问题：设有一数组，其大小为10个元素（int   str[10]）数组内的数据是无序。现在要求我们通过编程将这个无序的数组变成一个从小到大排序的数组（从下标为0开始）</p>
+<p>思路：按照题目的要求，毫无疑问，正确的结果应该就像这样： 1 2 3 4 5 6 7 8 9 10   要做到这样，最简单和最直接想到的方法就是进行对比交换。</p>
+<p>首先，把10个数里最小的个数放到下标为0的位置上（str[0]）通过将下标为0的数（str[0]）与剩下其余9个数进行对比交换（将较少者放置在下标为0的位置上），就可以得到这10个数最小的那个10个数最小的那位确定后，接下来就要找剩下9个数最小的那个。因为已经确定出一个最小的数，所以就不要动str[0]，直接从str[1]开始，与剩下的8个数对比交换，找出9个数中最小的那位放到下标为1（str[1]）的位置上<br>继续按照这个思路就可以将这十个数变成有序的（从小到大）的数组</p>
+<p>代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;  </span></span><br><span class="line">  </span><br><span class="line">void swap(int *a, int *b); //交换两个数  </span><br><span class="line">  </span><br><span class="line">int main()  </span><br><span class="line">&#123;  </span><br><span class="line">    int     str[<span class="number">10</span>];  </span><br><span class="line">    int     i, j;  </span><br><span class="line">    //初始化数组为<span class="number">10</span> <span class="number">9</span> <span class="number">8</span> <span class="number">7</span> <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">1</span>  </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        str[i] = <span class="number">10</span> - i;  </span><br><span class="line">    &#125;  </span><br><span class="line">    //排序，从a[<span class="number">0</span>]开始排，从小到大  </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; <span class="number">10</span>; j++)  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">if</span> (str[i] &gt; str[j])  </span><br><span class="line">            &#123;  </span><br><span class="line">                swap(&amp;str[i], &amp;str[j]);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">        //将十个数输出  </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)  </span><br><span class="line">        printf(<span class="string">"%d\n"</span>, str[i]);  </span><br><span class="line">    <span class="keyword">return</span>    <span class="number">0</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">void swap(int *a, int *b)  </span><br><span class="line">&#123;  </span><br><span class="line">    int     c;  </span><br><span class="line">     c = *a;  </span><br><span class="line">    *a = *b;  </span><br><span class="line">    *b =  c;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个方法是比较容易想到的实现方法。但存在不足：就是本来位于前面的较小数被交换到后面</p>
+<p>演示：<br>开始：9 4 5 6 8 3 2 7 10 1  （下标从左到右分别是0~9）按照上面的程序进行对比交换<br>第一次：4 9 5 6 8 3 2 7 10 1<br>第二次：4 9 5 6 8 3 2 7 10 1<br>。。。：（没有交换）<br>第五次：3 9 5 6 8 4 2 7 10 1<br>第六次：2 9 5 6 8 3 4 7 10 1<br>。。。：（没有交换）<br>第十次：1 9 5 6 8 3 4 7 10 2 </p>
+<p>可以看出，原来较小的数是在前面的，经过一轮的交换后放到后面了</p>
+<p>那么怎样解决这个不足呢？可以使用冒泡排序<br>什么是冒泡排序呢？<br>你可以这样理解：（从小到大排序）存在10个不同大小的气泡，由底至上地把较少的气泡逐步地向上升，这样经过遍历一次后，最小的气泡就会被上升到顶（下标为0），然后再从底至上地这样升，循环直至十个气泡大小有序。<br>在冒泡排序中，最重要的思想是两两比较，将两者较少的升上去<br>冒泡排序最坏情况的时间复杂度是O(n²)</p>
+<p>代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#include &lt;stdio.h&gt;  </span></span><br><span class="line">void swap(int *a, int *b);  </span><br><span class="line">int main()  </span><br><span class="line">&#123;  </span><br><span class="line">    int    array[<span class="number">10</span>] = &#123;<span class="number">15</span>, <span class="number">225</span>, <span class="number">34</span>, <span class="number">42</span>, <span class="number">52</span>, <span class="number">6</span>, <span class="number">7856</span>, <span class="number">865</span>, <span class="number">954</span>, <span class="number">10</span>&#125;;  </span><br><span class="line">    int    i, j;  </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        //每一次由底至上地上升  </span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">9</span>; j &gt; i; j--)  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">if</span> (array[j] &lt; array[j<span class="number">-1</span>])  </span><br><span class="line">            &#123;  </span><br><span class="line">                    swap(&amp;array[j], &amp;array[j<span class="number">-1</span>]);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        printf(<span class="string">"%d\n"</span>, array[i]);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span>    <span class="number">0</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">void swap(int *a, int *b)  </span><br><span class="line">&#123;  </span><br><span class="line">    int    temp;  </span><br><span class="line">    temp = *a;  </span><br><span class="line">      *a = *b;  </span><br><span class="line">      *b = temp;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void bubbleSort(int data[], int n)</span><br><span class="line">&#123;</span><br><span class="line">    int temp=<span class="number">0</span>;</span><br><span class="line">    int i,j;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n-i<span class="number">-1</span>; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(data[j]&gt;data[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                temp=data[j];</span><br><span class="line">                data[j]=data[j+<span class="number">1</span>];</span><br><span class="line">                data[j+<span class="number">1</span>]=temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(<span class="string">"%d "</span>,data[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/BubbleSort/" data-id="cjw95mlmm0001obse44509u2i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ShellSort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/ShellSort/" class="article-date">
+  <time datetime="2017-11-28T06:33:27.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/排序/">排序</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/28/ShellSort/">希尔排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>希尔排序的实质就是分组插入排序，该方法又称缩小增量排序，因DL．Shell于1959年提出而得名。</p>
+<p>该方法的基本思想是：先将整个待排元素序列分割成若干个子序列（由相隔某个“增量”的元素组成的）分别进行直接插入排序，然后依次缩减增量再进行排序，待整个序列中的元素基本有序（增量足够小）时，再对全体元素进行一次直接插入排序。因为直接插入排序在元素基本有序的情况下（接近最好情况），效率是很高的，因此希尔排序在时间效率上比前两种方法有较大提高。</p>
+<p>以n=10的一个数组49, 38, 65, 97, 26, 13, 27, 49, 55, 4为例</p>
+<p>第一次 gap = 10 / 2 = 5</p>
+<p>49   38   65   97   26   13   27   49   55   4</p>
+<p>1A   2A   3A   4A   5A   1B  2B    3B   4B  5B     </p>
+<p>1A,1B，2A,2B等为分组标记，数字相同的表示在同一组，大写字母表示是该组的第几个元素， 每次对同一组的数据进行直接插入排序。即分成了五组(49, 13) (38, 27) (65, 49)  (97, 55)  (26, 4)这样每组排序后就变成了(13, 49)  (27, 38)  (49, 65)  (55, 97)  (4, 26)，下同。</p>
+<p>第二次 gap = 5 / 2 = 2</p>
+<p>排序后</p>
+<p>13   27   49   55   4    49   38   65   97   26</p>
+<p>1A   1B    1C  1D  1E    2A   2B   2C   2D   2E</p>
+<p>第三次 gap = 2 / 2 = 1</p>
+<p>4   26   13   27   38    49   49   55   97   65</p>
+<p>1A   1B     1C    1D    1E      1F     1G    1H     1I     1J</p>
+<p>第四次 gap = 1 / 2 = 0 排序完成得到数组：</p>
+<p>4   13   26   27   38    49   49   55   65   97</p>
+<p>下面给出严格按照定义来写的希尔排序<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void shellsort1(int a[], int n)  </span><br><span class="line">&#123;  </span><br><span class="line">    int i, j, gap;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>) //步长  </span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; gap; i++)        //直接插入排序  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">for</span> (j = i + gap; j &lt; n; j += gap)   </span><br><span class="line">                <span class="keyword">if</span> (a[j] &lt; a[j - gap])  </span><br><span class="line">                &#123;  </span><br><span class="line">                    int temp = a[j];  </span><br><span class="line">                    int k = j - gap;  </span><br><span class="line">                    <span class="keyword">while</span> (k &gt;= <span class="number">0</span> &amp;&amp; a[k] &gt; temp)  </span><br><span class="line">                    &#123;  </span><br><span class="line">                        a[k + gap] = a[k];  </span><br><span class="line">                        k -= gap;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    a[k + gap] = temp;  </span><br><span class="line">                &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>很明显，上面的shellsort1代码虽然对直观的理解希尔排序有帮助，但代码量太大了，不够简洁清晰。因此进行下改进和优化，以第二次排序为例，原来是每次从1A到1E，从2A到2E，可以改成从1B开始，先和1A比较，然后取2B与2A比较，再取1C与前面自己组内的数据比较…….。这种每次从数组第gap个元素开始，每个元素与自己组内的数据进行直接插入排序显然也是正确的。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void shellsort2(int a[], int n)  </span><br><span class="line">&#123;  </span><br><span class="line">    int j, gap;  </span><br><span class="line">      </span><br><span class="line">    <span class="keyword">for</span> (gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>)  </span><br><span class="line">        <span class="keyword">for</span> (j = gap; j &lt; n; j++)//从数组第gap个元素开始  </span><br><span class="line">            <span class="keyword">if</span> (a[j] &lt; a[j - gap])//每个元素与自己组内的数据进行直接插入排序  </span><br><span class="line">            &#123;  </span><br><span class="line">                int temp = a[j];  </span><br><span class="line">                int k = j - gap;  </span><br><span class="line">                <span class="keyword">while</span> (k &gt;= <span class="number">0</span> &amp;&amp; a[k] &gt; temp)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    a[k + gap] = a[k];  </span><br><span class="line">                    k -= gap;  </span><br><span class="line">                &#125;  </span><br><span class="line">                a[k + gap] = temp;  </span><br><span class="line">            &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>再将直接插入排序部分用 白话经典算法系列之二 直接插入排序的三种实现  中直接插入排序的第三种方法来改写下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void shellsort3(int a[], int n)  </span><br><span class="line">&#123;  </span><br><span class="line">    int i, j, gap;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span> (gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>)  </span><br><span class="line">        <span class="keyword">for</span> (i = gap; i &lt; n; i++)  </span><br><span class="line">            <span class="keyword">for</span> (j = i - gap; j &gt;= <span class="number">0</span> &amp;&amp; a[j] &gt; a[j + gap]; j -= gap)  </span><br><span class="line">                Swap(a[j], a[j + gap]);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/ShellSort/" data-id="cjw95mlni001nobsecum1o7s0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C语言/">C语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Matlab/">Matlab</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT乙级/">PAT乙级</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAT甲级/">PAT甲级</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wechat/">Wechat</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/单链表/">单链表</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/排序/">排序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数模/">数模</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-JS/">Node.JS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PAT乙级/">PAT乙级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PAT甲级/">PAT甲级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wechat-navigator/">Wechat-navigator</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/指针/">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法与数据结构/">算法与数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/Matlab/" style="font-size: 12.5px;">Matlab</a> <a href="/tags/Node-JS/" style="font-size: 10px;">Node.JS</a> <a href="/tags/PAT乙级/" style="font-size: 20px;">PAT乙级</a> <a href="/tags/PAT甲级/" style="font-size: 10px;">PAT甲级</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Wechat-navigator/" style="font-size: 10px;">Wechat-navigator</a> <a href="/tags/指针/" style="font-size: 10px;">指针</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a> <a href="/tags/算法与数据结构/" style="font-size: 17.5px;">算法与数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/06/Matalb2017bMAC/">Matalb2017b  MAC</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/PAT-1001-0/">PAT甲级-1001</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/pat-1027/">PAT乙级-1027  打印沙漏(20)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/08/Matlab2017/">Matlab2017a破解与安装</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/30/Wechat-navigator/">Wechat-navigator</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
